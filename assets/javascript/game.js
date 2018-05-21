@@ -185,6 +185,8 @@ $('#Attack').on('click', function () {
 function SelectionScreen() {
     if (LinkExp < 10) {
         $('#ExpTilNext').text("Exp until next level: " + (10 - LinkExp));
+        $('.animation').css('background', 'url(assets/images/sword.tunic1.png)');
+        $('.sword').css('background', 'url(assets/images/sword.sword2.png)');
     }
     if (LinkExp >= 10 && LinkExp < 50) {
         $('#ExpTilNext').text("Exp until next level: " + (50 - LinkExp));
