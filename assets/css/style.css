@@ -1,0 +1,233 @@
+.animation {
+    position: relative;
+    z-index: 2;
+    height:32px;
+    width:32px;
+    top:150px;
+    left:200px;
+    transform: scale(3,3);
+    background: url(../images/sword.tunic1.png);
+}
+.parent{
+    height: 495px;
+    border: 5px solid rgb(3, 243, 3);
+    border-radius: 12px;
+    background: rgba(0, 0, 0,.6);
+}
+#AtkZone{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#Attack {
+    position: relative;
+    z-index: 0;
+    border: none;
+    background: url(../images/ShieldSword.png);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    height: 150px;
+    font-family: 'Fugaz One', cursive;
+    color: navy;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 20px;
+}
+.DmgDisplay, #DmgTaken {
+    display: flex;
+    position: relative;
+    right: 55px;
+    z-index: 5;
+    height: 24px;
+    width: 36px;
+    padding: 24px;
+    background: url(../images/DamageBG.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position-x: 11px;
+    background-position-y: 12px;
+    font-size: 12px;
+}
+#DmgTaken {
+
+    left: 190px;
+}
+.sword {
+    background: url(../images/sword.sword2.png);
+    width: 72px;
+    height: 72px;
+    z-index: 1;
+    position: relative;
+    bottom: 14.5px;
+    left: -23px;
+    transform: scale(1.2,1.2);
+}
+.badguy {
+    background: url(../images/agahim.png);
+    width: 42px;
+    height: 55px;
+    float: left;
+    margin:30px 25% 30px 25%;
+}
+.fairy {
+    background: url(../images/great_fairy.png);
+    width:32px;
+    height:48px;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: scale(3,3);
+}
+#Start {
+    position: absolute;
+    left: 49.5%;
+    top: 60px;
+    border: none;
+    background: none;
+    font-family: 'Fugaz One', cursive;
+    font-size: 40px;
+    color: rgb(179, 53, 53);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    left: 590px;
+}
+#LinkHp {
+    z-index: 4;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skeleton {
+    background: url(../images/ghostly_proprietor.png);
+    width: 32px;
+    height: 32px;
+    margin:60px 25% 36px 25%;   
+    position: relative;
+    float:left;
+}
+#EnemyHp {
+    z-index: 4;
+    position: relative;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#LinkHp, #EnemyHp {
+    text-align: center;
+    font-size: 30px;
+}
+.Enemyhere{
+    height: 400px;
+}
+#enemies {
+    border: 5px solid rgb(3, 243, 3);
+    border-radius: 12px;
+    background-image: url(../images/BrownStoneTile.png);
+    background-repeat: repeat;
+}
+.ganon {
+    height: 68px;
+    width: 72px;
+    background: url(../images/Ganon.png);
+    float:left;
+    margin:30px 25% 30px 25%;
+}
+.knight {
+    height: 64px;
+    width: 39px;
+    background: url(../images/knights.png);
+    float: left;
+    margin:30px 25% 33px 25%;
+}
+.HpText {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.Heart {
+    width: 8px;
+    height: 7px;
+    transform: scale(3,3);
+    background: url(../images/Hearts.PNG);
+    position: relative;
+    display: none;
+}
+.Explode {
+    width: 48px;
+    height: 48px;
+    background: url(../images/explosion.png);
+    position: relative;
+}
+body {
+    background: black;
+}
+.wrapper {
+    height: 790px;
+    background-image: url(../images/Linktopast.jpg);
+    background-position-y: -280px;
+}
+#Rightbox {
+    border: 5px solid rgb(3, 243, 3);
+    border-radius: 12px;
+    height:495px;
+    background: rgba(0, 0, 0,.6);
+}
+#LinkLvl, #ExpTilNext {
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 260px;
+    font-size: 26px;
+    text-align: center;
+}
+#VictoryLink {
+    height: 24px;
+    width: 24px;
+    background: url(../images/victory.tunic.png);
+    position: relative;
+    z-index: 1;
+    left: 50%;
+    top: 350px;
+    transform: scale(3,3);
+}
+#VictorySword{
+    position: relative;
+    z-index: 2;
+    height: 64px;
+    width: 64px;
+    left: -21px;
+    bottom: 18px;
+    background: url(../images/victory.sword.png);
+    transform: scale(1.1,1.1);
+}
+#Victory {
+    font-family: 'Fugaz One', cursive;
+    font-size: 60px;
+    color: rgb(179, 53, 53);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    position: relative;
+    top: 150px;
+    left: 42%;
+    width: 300px;
+}
+#Again {
+    position: relative;
+    left: 36%;
+    top: 370px;
+    border: none;
+    background: none;
+    font-family: 'Fugaz One', cursive;
+    font-size: 40px;
+    color: navy;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+#EnemyName {
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+    bottom: 90px;
+}

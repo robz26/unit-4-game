@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPG</title>
+    <link rel="stylesheet" type="text/css" href="../Word-Guess-Game/assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row" id="enemies">
+                <div class="col-xs-3" id="skele">
+                    <div class="skeleton"></div>
+                </div>
+                <div class="col-xs-3" id="kni">
+                    <div class="knight"></div>
+                </div>
+                <div class="col-xs-3" id="bad">
+                    <div class="badguy"></div>
+                </div>
+                <div class="col-xs-3" id="gan">
+                    <div class="ganon"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5 parent">
+                    <div class="animation animation-2">
+                        <div class="sword">
+
+                        </div>
+                    </div>
+                    <p class="HpText" id="LinkHp"></p>
+                    <p class="HpText" id="LinkLvl"></p>
+                    <p class="HpText" id="ExpTilNext"></p>
+                    <p class="HpText" id="DmgTaken"></p>
+
+                </div>
+                <div class="col-xs-2" id="AtkZone">
+                    <button type="button" id="Attack">ATTACK</button>
+
+                </div>
+                <div class="col-xs-5" id="Rightbox">
+                    <p class="HpText" id="EnemyHp"></p>
+                    <div class="Enemyhere">
+                        <p class="HpText DmgDisplay"></p>
+                    </div>
+                    <p class="HpText" id="EnemyName"></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="fairy"></div>
+    <button type="button" id="Start" style="display: none;">Click Here to Start</button>
+    </div>
+    <div class="Heart"></div>
+    <div class="Explode" style="display: none;"></div>
+
+    </div>
+    <div id="VictoryLink">
+            <div id="VictorySword"></div>
+            
+    </div>
+    <div id="VicDisplay">
+    <p id="Victory">VICTORY!</p>
+    <button type="button" id="Again">Click Here to Play Again</button>
+    </div>
+    <script src="../../../bower_components/jquery/jquery.js"></script>
+    <script src="assets/javascript/jquery.animateSprite.min.js"></script>
+    <script src="assets/javascript/jquery.animateSprite.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
