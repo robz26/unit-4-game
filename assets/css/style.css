@@ -204,7 +204,7 @@ body {
     background: url(../images/victory.sword.png);
     transform: scale(1.1,1.1);
 }
-#Victory {
+#Victory, .EndScreen {
     font-family: 'Fugaz One', cursive;
     font-size: 60px;
     color: rgb(179, 53, 53);
@@ -214,7 +214,7 @@ body {
     left: 42%;
     width: 300px;
 }
-#Again {
+#Again, #Again2 {
     position: relative;
     left: 36%;
     top: 370px;
@@ -230,4 +230,13 @@ body {
     text-align: center;
     position: relative;
     bottom: 90px;
+}
+#DeathLink {
+    height: 24px;
+    width: 24px;
+    background: url(../images/dying.png);
+    transform: scale(3,3);
+    position: relative;
+    left:50%;
+    top: 370px;
 }

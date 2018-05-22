@@ -91,9 +91,9 @@ $('#Attack').on('click', function () {
     //enemy or link hp reaches zero
     if (LinkHp <= 0) {
         $('#LinkHp').hide();
+        OverWorld.pause();
         LinkDies.play();
-        setTimeout(Intro, 400);
-        GameFinished = true;
+        setTimeout(Dead, 400);
     }
     if (EnemyHp <= 0) {
         $(".DmgDisplay").hide();
@@ -344,8 +344,7 @@ $(".knight").animateSprite({
         Right: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     },
     loop: true,
-    complete: function () {
-    }
+    complete: function () { }
 });
 
 $(".Heart").animateSprite({
@@ -356,8 +355,7 @@ $(".Heart").animateSprite({
     animations: {
         Right: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
     },
-    complete: function () {
-    }
+    complete: function () { }
 });
 
 $(".sword").animateSprite({
@@ -370,8 +368,7 @@ $(".sword").animateSprite({
         Left: [36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25]
     },
     loop: false,
-    complete: function () {
-    }
+    complete: function () { }
 });
 
 $(".badguy").animateSprite({
@@ -383,8 +380,7 @@ $(".badguy").animateSprite({
         Right: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     },
     loop: true,
-    complete: function () {
-    }
+    complete: function () { }
 });
 
 $("#VictoryLink").animateSprite({
@@ -393,12 +389,22 @@ $("#VictoryLink").animateSprite({
     columns: 18,
     autoplay: true,
     animations: {
-        Right: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14,15,16,17]
+        Right: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
     },
     loop: true,
-    complete: function () {
-    }
+    complete: function () { }
 });
+$("#DeathLink").animateSprite({
+    fps: 5,
+    loop: false,
+    columns: 10,
+    autoplay: true,
+    animations: {
+        Right: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    },
+    complete: function () { }
+});
+
 
 $("#VictorySword").animateSprite({
     fps: 12,
@@ -406,11 +412,10 @@ $("#VictorySword").animateSprite({
     columns: 9,
     autoplay: true,
     animations: {
-        Right: [54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71]
+        Right: [54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
     },
     loop: true,
-    complete: function () {
-    }
+    complete: function () { }
 });
 
 //intro squence
@@ -422,22 +427,21 @@ $(".fairy").animateSprite({
     animations: {
         Right: [0, 1],
     },
-    complete: function () {
-    }
+    complete: function () { }
 });
 
 
 $(document).ready(function () {
     Intro();
-    OverWorld.addEventListener('ended', function() {
+    OverWorld.addEventListener('ended', function () {
         OverWorld.currentTime = 1;
         OverWorld.play();
     }, false);
-    FairyIntro.addEventListener('ended', function() {
+    FairyIntro.addEventListener('ended', function () {
         FairyIntro.currentTime = 1;
         FairyIntro.play();
     }, false);
-    EndingSong.addEventListener('ended', function() {
+    EndingSong.addEventListener('ended', function () {
         EndingSong.currentTime = 1;
         EndingSong.play();
     }, false);
@@ -450,6 +454,8 @@ function Intro() {
     $('#VictoryLink').hide();
     $('#VictorySword').hide();
     $('#VicDisplay').hide();
+    $('#DeathLink').hide();
+    $('#DeathDisplay').hide();
     $('.fairy').show();
 
     $('.animation').animateSprite(Link);
@@ -521,6 +527,7 @@ var GameReset = () => {
         OverWorld.play();
     })
 }
+
 //Ending Screen
 var EndingScreen = () => {
     GameFinished = true;
@@ -528,10 +535,20 @@ var EndingScreen = () => {
     $('#VicDisplay').show();
     $('#VictoryLink').animateSprite('play').show();
     $('#VictorySword').animateSprite('play').show();
-    $('#Again').on('click', function() {
+    $('#Again').on('click', function () {
         Intro();
     });
-
+}
+//Death Screen
+var Dead = () => {
+    GameFinished = true;
+    $('.wrapper').delay(500).hide(0);
+    $('#DeathDisplay').show();
+    $('#DeathLink').show();
+    $('#DeathLink').animateSprite('restart').animateSprite('play').show();
+    $('#Again2').on('click', function () {
+        Intro();
+    });
 }
 //Extras
 var goLeft = function () {
